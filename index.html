@@ -42,6 +42,9 @@
             transform: translateX(-50%);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+        .modules-container {
+            margin-bottom: 100px;
+        }
         footer {
             margin-top: 20px;
             padding: 10px;
@@ -52,15 +55,27 @@
 </head>
 <body>
     <h1>Curso Digital</h1>
-    <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-        <img src="modulo1.jpg" alt="Imagen Módulo 1">
-        <p>Módulo 1</p>
-        <div class="popup">Información detallada del módulo 1.</div>
-    </div>
-    <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-        <img src="modulo2.jpg" alt="Imagen Módulo 2">
-        <p>Módulo 2</p>
-        <div class="popup">Información detallada del módulo 2.</div>
+    <div class="modules-container">
+        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+            <img src="ejemplo.jpg" alt="Imagen Módulo 1">
+            <p>Módulo 1</p>
+            <div class="popup">Información detallada del módulo 1.</div>
+        </div>
+        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+            <img src="ejemplo.jpg" alt="Imagen Módulo 2">
+            <p>Módulo 2</p>
+            <div class="popup">Información detallada del módulo 2.</div>
+        </div>
+        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+            <img src="ejemplo.jpg" alt="Imagen Módulo 2">
+            <p>Módulo 2</p>
+            <div class="popup">Información detallada del módulo 2.</div>
+        </div>
+        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+            <img src="ejemplo.jpg" alt="Imagen Módulo 2">
+            <p>Módulo 2</p>
+            <div class="popup">Información detallada del módulo 2.</div>
+        </div>
     </div>
     <script>
         function showPopup(element) {
