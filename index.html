@@ -13,7 +13,7 @@
         .module {
             display: inline-block;
             width: 200px;
-            height: 150px;
+            height: 200px;
             background-color: #6a5acd;
             color: white;
             margin: 10px;
@@ -21,6 +21,13 @@
             position: relative;
             border-radius: 10px;
             cursor: pointer;
+            border: 2px solid white;
+        }
+        .module img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
         }
         .popup {
             display: none;
@@ -35,16 +42,24 @@
             transform: translateX(-50%);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <h1>Curso Digital</h1>
     <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-        Módulo 1
+        <img src="modulo1.jpg" alt="Imagen Módulo 1">
+        <p>Módulo 1</p>
         <div class="popup">Información detallada del módulo 1.</div>
     </div>
     <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
-        Módulo 2
+        <img src="modulo2.jpg" alt="Imagen Módulo 2">
+        <p>Módulo 2</p>
         <div class="popup">Información detallada del módulo 2.</div>
     </div>
     <script>
@@ -55,5 +70,8 @@
             element.querySelector('.popup').style.display = 'none';
         }
     </script>
+    <footer>
+        <p>Escuela XYZ | Todos los derechos reservados &copy; 2025</p>
+    </footer>
 </body>
 </html>
