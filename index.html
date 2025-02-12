@@ -13,7 +13,7 @@
         .module {
             display: inline-block;
             width: 200px;
-            height: 150px;
+            height: 200px;
             background-color: #6a5acd;
             color: white;
             margin: 10px;
@@ -34,13 +34,28 @@
             position: absolute;
             background: white;
             color: black;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
-            width: 180px;
+            width: 250px;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+        .popup p {
+            margin: 0 0 10px;
+        }
+        .popup button {
+            background-color: #6a5acd;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .popup button:hover {
+            background-color: #5a4dbd;
         }
         .modules-container {
             margin-bottom: 100px;
@@ -56,34 +71,63 @@
 <body>
     <h1>Curso Digital</h1>
     <div class="modules-container">
-        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+        <div class="module" onclick="togglePopup(this)">
             <img src="ejemplo.jpg" alt="Imagen Módulo 1">
             <p>Módulo 1</p>
-            <div class="popup">Información detallada del módulo 1.</div>
+            <div class="popup">
+                <p>Información detallada del módulo 1. Aquí puedes agregar una descripción más extensa.</p>
+                <button onclick="moreInfo(event, 'modulo1')">Más información</button>
+            </div>
         </div>
-        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+        <div class="module" onclick="togglePopup(this)">
             <img src="ejemplo.jpg" alt="Imagen Módulo 2">
             <p>Módulo 2</p>
-            <div class="popup">Información detallada del módulo 2.</div>
+            <div class="popup">
+                <p>Información detallada del módulo 2. Aquí puedes agregar una descripción más extensa.</p>
+                <button onclick="moreInfo(event, 'modulo2')">Más información</button>
+            </div>
         </div>
-        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+        <div class="module" onclick="togglePopup(this)">
             <img src="ejemplo.jpg" alt="Imagen Módulo 2">
             <p>Módulo 2</p>
-            <div class="popup">Información detallada del módulo 2.</div>
+            <div class="popup">
+                <p>Información detallada del módulo 2. Aquí puedes agregar una descripción más extensa.</p>
+                <button onclick="moreInfo(event, 'modulo2')">Más información</button>
+            </div>
         </div>
-        <div class="module" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">
+        <div class="module" onclick="togglePopup(this)">
             <img src="ejemplo.jpg" alt="Imagen Módulo 2">
             <p>Módulo 2</p>
-            <div class="popup">Información detallada del módulo 2.</div>
+            <div class="popup">
+                <p>Información detallada del módulo 2. Aquí puedes agregar una descripción más extensa.</p>
+                <button onclick="moreInfo(event, 'modulo2')">Más información</button>
+            </div>
+        </div>
+        <div class="module" onclick="togglePopup(this)">
+            <img src="ejemplo.jpg" alt="Imagen Módulo 2">
+            <p>Módulo 2</p>
+            <div class="popup">
+                <p>Información detallada del módulo 2. Aquí puedes agregar una descripción más extensa.</p>
+                <button onclick="moreInfo(event, 'modulo2')">Más información</button>
+            </div>
         </div>
     </div>
     <script>
-        function showPopup(element) {
-            element.querySelector('.popup').style.display = 'block';
+        function togglePopup(element) {
+            let popup = element.querySelector('.popup');
+            let allPopups = document.querySelectorAll('.popup');
+            allPopups.forEach(p => { if (p !== popup) p.style.display = 'none'; });
+            popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
         }
-        function hidePopup(element) {
-            element.querySelector('.popup').style.display = 'none';
+        function moreInfo(event, module) {
+            event.stopPropagation();
+            alert('Más información sobre ' + module);
         }
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.module')) {
+                document.querySelectorAll('.popup').forEach(popup => popup.style.display = 'none');
+            }
+        });
     </script>
     <footer>
         <p>Escuela XYZ | Todos los derechos reservados &copy; 2025</p>
