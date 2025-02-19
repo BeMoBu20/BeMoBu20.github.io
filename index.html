@@ -9,68 +9,80 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 20px;
-            background-color: #f4f4f4;
+            background: linear-gradient(to bottom, #6a5acd, #ffffff);
         }
         .header {
-            background-color: #6a5acd;
-            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            font-size: 18px;
-            font-weight: bold;
+            background-color: #4b0082;
+            color: white;
             border-radius: 10px;
-            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .menu {
+        .header img {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            margin-top: 30px;
         }
-        .menu button {
-            width: 220px;
-            height: 120px;
-            background-color: #6a5acd;
-            color: white;
-            font-size: 16px;
-            border: none;
+        .folder {
+            width: 200px;
+            height: 150px;
+            background-color: #ffd700;
+            margin: 15px;
+            padding: 20px;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
-            transition: 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .menu button:hover {
-            background-color: #5848c2;
+        .folder:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
-        .footer {
-            margin-top: 40px;
-            padding: 10px;
+        footer {
+            margin-top: 50px;
+            padding: 20px;
             background-color: #333;
             color: white;
-            font-size: 14px;
             border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        Curso-Taller de formación en el nuevo modelo educativo 2024 en las universidades del subsistema tecnológico para docentes de la Universidad Politécnica de Puebla
+        <img src="logo.png" alt="Logo Escuela">
+        <h1>Curso-Taller de Formación en el Nuevo Modelo Educativo 2024<br>Universidad Politécnica de Puebla</h1>
     </div>
-    <div class="menu">
-        <button>Información del curso-taller</button>
-        <button>Bienvenida</button>
-        <button>Encuadre</button>
-        <button>Módulo 1</button>
-        <button>Módulo 2</button>
-        <button>Módulo 3</button>
-        <button>Recuperación 1</button>
-        <button>Módulo 4</button>
-        <button>Módulo 5</button>
-        <button>Módulo 6</button>
-        <button>Recuperación 2</button>
-        <button>Cierre curso-taller</button>
-        <button>Constancias</button>
+    <div class="container">
+        <div class="folder">Información del curso-taller</div>
+        <div class="folder">Bienvenida</div>
+        <div class="folder">Encuadre</div>
+        <div class="folder">Módulo 1</div>
+        <div class="folder">Módulo 2</div>
+        <div class="folder">Módulo 3</div>
+        <div class="folder">Recuperación 1</div>
+        <div class="folder">Módulo 4</div>
+        <div class="folder">Módulo 5</div>
+        <div class="folder">Módulo 6</div>
+        <div class="folder">Recuperación 2</div>
+        <div class="folder">Cierre Curso-Taller</div>
+        <div class="folder">Constancias</div>
     </div>
-    <div class="footer">
-        Fechas de los módulos: [Fechas por definir]
-    </div>
+    <footer>
+        <p>Fechas del curso: [Por definir]</p>
+        <p>Universidad Politécnica de Puebla | Todos los derechos reservados &copy; 2025</p>
+    </footer>
 </body>
 </html>
