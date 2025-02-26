@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso-Taller</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 20px;
-            background: linear-gradient(to bottom, #6a5acd, #ffffff);
+            background: linear-gradient(to bottom, #ededed, #ffffff);
         }
         .header {
             display: flex;
@@ -37,11 +38,12 @@
             height: 150px;
             background-color: #ffd700;
             margin: 15px;
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             font-weight: bold;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
             cursor: pointer;
@@ -50,6 +52,14 @@
         .folder:hover {
             transform: scale(1.1);
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .icon {
+            font-size: 40px;
+            margin-top: 10px;
+            color: #4b0082;
+        }
+        .folder-text {
+            margin-bottom: 10px;
         }
         footer {
             margin-top: 50px;
@@ -62,23 +72,62 @@
 </head>
 <body>
     <div class="header">
-        <img src="fty.png" alt="Logo Escuela">
+        <img src="logo.png" alt="Logo Escuela">
         <h1>Curso-Taller de Formación en el Nuevo Modelo Educativo 2024<br>Universidad Politécnica de Puebla</h1>
     </div>
     <div class="container">
-        <div class="folder">Información del curso-taller</div>
-        <div class="folder">Bienvenida</div>
-        <div class="folder">Encuadre</div>
-        <div class="folder">Módulo 1</div>
-        <div class="folder">Módulo 2</div>
-        <div class="folder">Módulo 3</div>
-        <div class="folder">Recuperación 1</div>
-        <div class="folder">Módulo 4</div>
-        <div class="folder">Módulo 5</div>
-        <div class="folder">Módulo 6</div>
-        <div class="folder">Recuperación 2</div>
-        <div class="folder">Cierre Curso-Taller</div>
-        <div class="folder">Constancias</div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-info-circle"></i></div>
+            <div class="folder-text">Información del curso-taller</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-handshake"></i></div>
+            <div class="folder-text">Bienvenida</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-book"></i></div>
+            <div class="folder-text">Encuadre</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-folder"></i></div>
+            <div class="folder-text">Módulo 1</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-folder"></i></div>
+            <div class="folder-text">Módulo 2</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-folder"></i></div>
+            <div class="folder-text">Módulo 3</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-undo"></i></div>
+            <div class="folder-text">Recuperación 1</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-folder"></i></div>
+            <div class="folder-text">Módulo 4</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-folder"></i></div>
+            <div class="folder-text">Módulo 5</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-folder"></i></div>
+            <div class="folder-text">Módulo 6</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-undo"></i></div>
+            <div class="folder-text">Recuperación 2</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-flag-checkered"></i></div>
+            <div class="folder-text">Cierre Curso-Taller</div>
+        </div>
+        <div class="folder">
+            <div class="icon"><i class="fas fa-certificate"></i></div>
+            <div class="folder-text">Constancias</div>
+        </div>
     </div>
     <footer>
         <p>Fechas del curso: [Por definir]</p>
