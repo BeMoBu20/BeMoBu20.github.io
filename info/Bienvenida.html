@@ -3,42 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 1</title>
+    <title>Bienvenida</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             text-align: center;
-            margin: 20px;
-            background: linear-gradient(to bottom, #ededed, #ffffff);
+            background: linear-gradient(to bottom, #ffffff, #dceffd);
         }
-        .header {
-            padding: 20px;
-            background-color: #4b0082;
-            color: white;
-            border-radius: 10px;
-        }
-        .content {
-            margin: 30px auto;
-            padding: 20px;
+        .container {
             max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #208bb5;
+        }
+        .banner {
+            width: 100%;
+            border-radius: 10px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            padding: 10px;
         }
         .back {
+            display: inline-block;
             margin-top: 20px;
+            padding: 10px 20px;
+            background: #208bb5;
+            color: white;
             text-decoration: none;
-            color: #4b0082;
-            font-weight: bold;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back:hover {
+            background: #176b8a;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Módulo 1: Introducción</h1>
-    </div>
-    <div class="content">
-        <p>Bienvenidos al Módulo 1 del curso. Aquí encontrarás materiales y actividades.</p>
+    <div class="container">
+        <img src="bienvenida.jpg" alt="Bienvenida al curso" class="banner">
+        <h1>¡Bienvenido al Curso-Taller!</h1>
+        <p>
+            En este curso, exploraremos el nuevo modelo educativo 2024 y su aplicación en las universidades del subsistema tecnológico.
+            Aquí aprenderás estrategias innovadoras para mejorar la enseñanza y facilitar el aprendizaje de los estudiantes.
+        </p>
+        <p>
+            Esperamos que este curso sea una experiencia enriquecedora para ti.  
+            ¡Prepárate para aprender y transformar la educación!
+        </p>
         <a href="../index.html" class="back">⬅ Volver al menú principal</a>
     </div>
 </body>
