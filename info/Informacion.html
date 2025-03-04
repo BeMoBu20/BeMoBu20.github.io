@@ -71,6 +71,52 @@
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
 
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Ajusta según sea necesario */
+            background: #5d0096; /* Color de fondo morado */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .imagen-superior {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .imagen-inferior {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .contenido {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 600px;
+        }
+
+        .icono {
+            width: 150px;
+        }
+
+        .boton {
+            background: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         /* Nueva sección de contenido */
         .content {
             background: white;
@@ -126,20 +172,18 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <img src="../fotos/cursos.png" alt="Imagen representativa del curso">
+    <div class="portada">
+        <img src="../fotos/arriba.png" class="imagen-superior">
+        
+        <div class="contenido">
+            <img src="../fotos/cursos.png" class="icono">
+            <h1>NMEBC<br>De las UST-DGUTyP<br>Curso-Taller</h1>
+            <p>Para docentes de nuevo ingreso<br>Universidad Politécnica de Puebla<br>Mayo - Agosto 2025</p>
+            <button class="boton">← Volver al menú principal</button>
         </div>
-        <div class="right">
-            <div class="text">NMEBC</div>
-            <div class="text">De las UST-DGUTyP</div>
-            <div class="text">Curso-Taller</div>
-            <div class="text small-text">Para docentes de nuevo ingreso</div>
-            <div class="text small-text">Universidad Politécnica de Puebla</div>
-            <div class="text small-text">Mayo - Agosto 2025</div>
-            <a href="../index.html" class="back">⬅ Volver al menú principal</a>
-        </div>
-    </div>
+    
+        <img src="../fotos/abajo.png" class="imagen-inferior">
+    </div>    
 
     <!-- Nueva sección de contenido con fondo blanco -->
     <div class="content">
