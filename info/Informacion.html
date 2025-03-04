@@ -9,24 +9,40 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #ffffff, #dceffd);
-            text-align: center;
+            background: linear-gradient(to bottom, #4b0082, #2FAADA);
+            color: white;
         }
         .container {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            padding: 20px;
+            padding: 40px;
+        }
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .right {
+            flex: 1;
+            text-align: left;
+            padding-left: 40px;
         }
         .text {
-            font-size: 40px;
+            font-size: 50px;
             font-weight: bold;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .visible {
             opacity: 1;
@@ -35,32 +51,41 @@
         .small-text {
             font-size: 24px;
             font-weight: normal;
+            color: #EDEDED;
         }
         .back {
             display: inline-block;
             margin-top: 30px;
-            padding: 10px 20px;
-            background: #208bb5;
-            color: white;
+            padding: 12px 25px;
+            background: #f4c014;
+            color: #4b0082;
             text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background 0.3s;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         .back:hover {
-            background: #176b8a;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="text">NMEBC</div>
-        <div class="text">De las UST-DGUTyP</div>
-        <div class="text">Curso-Taller</div>
-        <div class="text small-text">Universidad Politécnica de Puebla</div>
-        <div class="text small-text">Para docentes de nuevo ingreso</div>
-        <div class="text small-text">Mayo - Agosto 2025</div>
-        <a href="../index.html" class="back">⬅ Volver al menú principal</a>
+        <div class="left">
+            <img src="curso.jpg" alt="Imagen representativa del curso">
+        </div>
+        <div class="right">
+            <div class="text">NMEBC</div>
+            <div class="text">De las UST-DGUTyP</div>
+            <div class="text">Curso-Taller</div>
+            <div class="text small-text">Universidad Politécnica de Puebla</div>
+            <div class="text small-text">Para docentes de nuevo ingreso</div>
+            <div class="text small-text">Mayo - Agosto 2025</div>
+            <a href="../index.html" class="back">⬅ Volver al menú principal</a>
+        </div>
     </div>
 
     <script>
