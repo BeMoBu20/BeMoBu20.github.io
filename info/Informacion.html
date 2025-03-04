@@ -3,100 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 1</title>
+    <title>Información del Curso-Taller</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffffff, #dceffd);
             text-align: center;
-            margin: 20px;
-            background-color: #4b0082;
         }
-        .header {
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
             padding: 20px;
-            background-color: #4b0082;
-            color: white;
-            border-radius: 10px;
         }
-        .content {
-            margin: 30px auto;
-            padding: 20px;
-            max-width: 800px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        .text {
+            font-size: 40px;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            margin: 10px 0;
+        }
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .small-text {
+            font-size: 24px;
+            font-weight: normal;
         }
         .back {
-            margin-top: 20px;
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #208bb5;
+            color: white;
             text-decoration: none;
-            color: #4b0082;
-            font-weight: bold;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .back:hover {
+            background: #176b8a;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Módulo 1: Introducción</h1>
-    </div>
-    <div class="content">
-        <p>Bienvenidos al Módulo 1 del curso. Aquí encontrarás materiales y actividades.</p>
+    <div class="container">
+        <div class="text">NMEBC</div>
+        <div class="text">De las UST-DGUTyP</div>
+        <div class="text">Curso-Taller</div>
+        <div class="text small-text">Universidad Politécnica de Puebla</div>
+        <div class="text small-text">Para docentes de nuevo ingreso</div>
+        <div class="text small-text">Mayo - Agosto 2025</div>
         <a href="../index.html" class="back">⬅ Volver al menú principal</a>
     </div>
-    <div style="text-align: center;">
-        <h1 style="color:#ffffff">NMEBC</h1>
-        <h2>De las UST-DGUTyP</h2>
-    </div>
-    <div style="background-color: #ffffff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-        <h1> OBJETIVO GENERAL</h1>
-        <p>Al concluir el curso taller, el participante será competente para:</p>
-        <p>Identificar los antecedentes y conformación del Nuevo Modelos Educativo 2024 de las UST, basado en 
-            un modelo constructivista por competencias.</p>
-        <p>Conocerá las características y atributos que sustenta este Nuevo Modelo Educativo, las estrategias 
-            del modelo pedagógico “NMEBC", la estructura del diseño curricular, al proceso de enseñanza aprendizaje, 
-            la evaluación del aprendizaje, el seguimiento al desempeño, que permitan el desarrollo de competencias 
-            para la vida en los educandos.</p>
-        <p>Los lineamientos del Posgrado así como las otras modalidades y opciones educativas que ofrece este nuevo modelo educativo 2024.</p>
-    </div>
-    <div aria-colspan="2">
-                <h2>PLATAFORMA VIRTUAL</h2>
-                <p>Classroom</p>
-    </div>
-    <div aria-colspan="2">
-        <h2>PLATAFORMA VIRTUAL</h2>
-        <p>Classroom</p>
-</div>
-    <div>
-    Las Universidad Politécnica de Puebla, perteneciente a la Dirección General de
-    Universidades Tecnológicas y Politécnicas (DGUTyP) (2012), implementa un Nuevo Modelo
-    Educativo para la Universidades del Subsistema Tecnológico (UST), sustentado en los
-    cambios educativos en su normativa, en la Ley General de Educación Superior (2021) así
-    como en convenios, acuerdos y recomendaciones internacionales. En ese sentido México
-    se ha comprometido con la Agenda 2030 promovida por la Organización de las Naciones
-    Unidas, en la cual se abordan una serie de objetivos y metas a nivel mundial sobre
-    desafíos sociales, económicos y ambientales. Uno de los objetivos es el Desarrollo
-    Sostenible en América Latina que, enfocado en la educación, establece la importancia de
-    “garantizar una educación inclusiva, equitativa y de calidad y promover oportunidades de
-    aprendizaje durante toda la vida para todos” (CEPAL, 2018). Con base en el Marco Jurídico
-    y Normativo de la educación en nuestro país, se establece el Programa Sectorial de
-    Educación 2020-2024, que como política educativa pública, plantea objetivos prioritarios
-    para transformar el Sistema Educativo Nacional, entre los cuales se consideran
-    fundamentalmente: • Garantizar el derecho de la población en México a una educación
-    equitativa, inclusiva, intercultural e integral, que tenga como eje principal el interés
-    superior de las niñas, niños, adolescentes y jóvenes. • Garantizar el derecho de la
-    población en México a una educación de excelencia, pertinente y relevante en los
-    diferentes tipos, niveles y modalidades del Sistema Educativo Nacional. Después de 30
-    años de existencia de las Universidades Tecnológicas y 20 años de las Universidades
-    Politécnicas en México, como subsistemas independientes, resulta necesario fortalecer su
-    pertinencia mediante la integración en un solo modelo educativo que atienda las nuevas
-    tendencias nacionales e internacionales, así como lo establecido en la Ley General de
-    Educación (2019), la Ley General de Educación Superior (2021), y de las directrices del
-    Articulo 3 de la Constitución Política de los Estados Unidos Mexicanos de los cuales se
-    han considerado también los elementos de la Nueva Escuela Mexicana.(NEM) Por lo
-    expuesto uno de los ejes rectores de este modelo, es la profesionalización docente, con la
-    cual se busca fortalecer la educación continua, y el trabajo colaborativo entre los colegas
-    para adquirir los instrumentos necesarios para implementar el nuevo modelo educativo.
-    Este nuevo paradigma exige una constante formación en el desarrollo y la aplicación de
-    nuevas metodologías y tecnologías aplicadas al desarrollo de competencias en los
-    educandos.
-    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".text");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
