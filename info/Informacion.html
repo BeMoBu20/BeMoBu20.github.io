@@ -81,6 +81,18 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            overflow: hidden;
+            transform: translateY(0);
+            animation: slideUp 1s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
         }
 
         .imagen-superior {
@@ -94,14 +106,29 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 10%;
         }
 
         .contenido {
             position: relative;
             z-index: 2;
             color: white;
-            max-width: 600px;
+            display: flex;
+            justify-content: space-between; /* Divide la sección en dos columnas */
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .contenido .left {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contenido .right {
+            flex: 1;
+            text-align: left;
+            padding-left: 40px;
         }
 
         .icono {
@@ -117,8 +144,6 @@
             border-radius: 5px;
         }
 
-
-        /* Nueva sección de contenido */
         .content {
             background: white;
             color: #4b0082;
@@ -177,10 +202,14 @@
         <img src="../fotos/arriba.png" class="imagen-superior">
         
         <div class="contenido">
-            <img src="../fotos/cursos.png" class="icono">
-            <h1>NMEBC<br>De las UST-DGUTyP<br>Curso-Taller</h1>
-            <p>Para docentes de nuevo ingreso<br>Universidad Politécnica de Puebla<br>Mayo - Agosto 2025</p>
-            <a href="../index.html" class="back">⬅ Volver al menú principal</a>
+            <div class="left">
+                <img src="../fotos/cursos.png" class="icono">
+            </div>
+            <div class="right">
+                <h1>NMEBC<br>De las UST-DGUTyP<br>Curso-Taller</h1>
+                <p>Para docentes de nuevo ingreso<br>Universidad Politécnica de Puebla<br>Mayo - Agosto 2025</p>
+                <a href="../index.html" class="back">⬅ Volver al menú principal</a>
+            </div>
         </div>
     
         <img src="../fotos/abajo.png" class="imagen-inferior">
