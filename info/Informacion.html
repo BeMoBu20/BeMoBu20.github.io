@@ -71,9 +71,8 @@
             box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
         }
 
-        /* Portada */
         .portada {
-            position: fixed;
+            position: fixed; 
             top: 0;
             left: 0;
             width: 100%;
@@ -84,8 +83,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            z-index: 10;
-            transition: opacity 1s ease-out;
+            z-index: 10; 
+            transition: transform 1s ease-out;
         }
 
         .portada img {
@@ -93,15 +92,49 @@
             height: auto;
         }
 
-        /* Contenido */
+        .contenido {
+            position: relative;
+            z-index: 2;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .contenido .left {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contenido .right {
+            flex: 1;
+            text-align: left;
+            padding-left: 40px;
+        }
+
+        .icono {
+            width: 150px;
+        }
+
+        .boton {
+            background: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
         .content {
-            margin-top: 100vh; /* Para que aparezca después de la portada */
+            margin-top: 100vh; 
             background: white;
             color: #4b0082;
             padding: 50px 20px;
             text-align: center;
-            transition: opacity 0.5s ease-in-out;
-            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            opacity: 0; 
         }
 
         .content.visible {
@@ -172,7 +205,6 @@
         <img src="../fotos/abajo.png" class="imagen-inferior">
     </div>    
 
-    <!-- Nueva sección de contenido con fondo blanco -->
     <div class="content">
         <div class="objetivo">
             <h2>OBJETIVO GENERAL</h2>
@@ -191,17 +223,16 @@
     </div>
 
     <script>
-        // Detecta el scroll y mueve la portada hacia arriba
         window.addEventListener('scroll', function() {
             const portada = document.querySelector('.portada');
             const content = document.querySelector('.content');
             
             const scrollPosition = window.scrollY;
 
-            // Desvanece la portada cuando se hace scroll
-            portada.style.opacity = 1 - (scrollPosition / window.innerHeight);
+            // Mueve la portada hacia arriba mientras haces scroll
+            portada.style.transform = `translateY(-${scrollPosition}px)`;
 
-            // Haz que el contenido aparezca cuando la portada se haya ido
+            // Aparece el contenido cuando se haya hecho scroll
             if (scrollPosition > window.innerHeight) {
                 content.classList.add('visible');
             } else {
